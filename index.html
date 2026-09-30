@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Discovery dashboard</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <a class="brand" href="#/">Discovery</a>
+    <label class="search-label" for="search">Search topics and items</label>
+    <input id="search" type="search" placeholder="Search questions, risks, assumptions" autocomplete="off">
+    <label class="client-label" for="client-name">Client</label>
+    <input id="client-name" type="text" placeholder="Client name" autocomplete="off" maxlength="120">
+    <p id="save-state" role="status" aria-live="polite">Loading</p>
+    <div class="header-actions">
+      <button type="button" id="export-json">Export JSON</button>
+      <button type="button" id="export-md">Download notes</button>
+      <button type="button" id="import-btn">Import</button>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+    </div>
+  </header>
+  <p id="storage-warning" class="warning" hidden></p>
+  <p id="toast" class="toast" role="status" hidden></p>
+  <p class="print-only" id="print-title">Discovery dashboard</p>
+  <main id="main">Loading the question bank…</main>
+  <script src="seed.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
